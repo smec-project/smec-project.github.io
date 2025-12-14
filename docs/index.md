@@ -31,8 +31,10 @@ hide:
 
 <figure markdown>
 
-![SMEC system overview](assets/img/smec_arch.png){ width="1100" }
-<figcaption>SMEC enables deadline-aware scheduling through fully decoupled operation at the RAN and edge servers.</figcaption>
+<div style="max-width: 1100px; margin: 0 auto; border: 2px dashed #9ca3af; border-radius: 12px; padding: 34px 18px; text-align: center; color: #6b7280">
+  <div style="font-weight: 700; letter-spacing: 0.02em">[Placeholder]</div>
+  <div style="margin-top: 6px">Main system figure will be placed here.</div>
+</div>
 
 </figure>
 
