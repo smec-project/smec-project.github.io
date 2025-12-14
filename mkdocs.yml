@@ -1,11 +1,11 @@
 # Project information
-site_name: SMEC Project
+site_name: SMEC
 site_author: SMEC authors
 site_description: SLO-aware 5G multi-access edge computing with SMEC
 edit_uri: ""
 
 # Copyright
-copyright: Copyright &copy; 2026 The University of Texas at Austin
+copyright: Copyright &copy; 2026 SMEC team
 
 theme:
   name: material

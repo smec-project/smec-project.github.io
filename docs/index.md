@@ -72,6 +72,8 @@ In particular, SMEC is built around three ideas:
 
 ## BibTeX
 
+If your work uses or is inspired by SMEC, please cite our NSDI’26 paper:
+
 ```bibtex
 @inproceedings{smec-nsdi26,
   title     = {Enabling SLO-Aware 5G Multi-Access Edge Computing with SMEC},
@@ -82,6 +84,11 @@ In particular, SMEC is built around three ideas:
 }
 ```
 
-## Acknowledgments
+## Sponsors
 
-This work was supported in part by NSF Award XXXX and AWS AI PhD Fellowship.
+<div style="display: flex; align-items: left; justify-content: left; gap: 28px; flex-wrap: wrap; margin-top: 0.75rem">
+  <img src="assets/img/ut-logo.png" alt="The University of Texas at Austin" style="height: 128px; width: auto" />
+  <img src="assets/img/nsf-logo.png" alt="National Science Foundation" style="height: 128px; width: auto" />
+</div>
+
+
