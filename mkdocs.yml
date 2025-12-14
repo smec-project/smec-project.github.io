@@ -1,5 +1,5 @@
 # Project information
-site_name: SMEC
+site_name: SMEC Project
 site_author: SMEC authors
 site_description: SLO-aware 5G multi-access edge computing with SMEC
 edit_uri: ""
@@ -9,9 +9,10 @@ copyright: Copyright &copy; 2026 The University of Texas at Austin
 
 theme:
   name: material
+  favicon: assets/img/favicon.png
+  logo: assets/img/smec-logo-white.png
   icon:
     repo: fontawesome/brands/github
-    logo: material/rocket-launch-outline
   features:
     - content.code.copy
     - content.code.annotate
@@ -24,7 +25,7 @@ theme:
     - announce.dismiss
   palette:
     - scheme: light
-      primary: black
+      primary: custom
       accent: amber
 
 # MkDocs plugins
