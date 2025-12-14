@@ -1,2 +1,56 @@
-site_name: SMEC project
-site_url: https://smec-project.github.io
+# Project information
+site_name: SMEC
+site_author: SMEC authors
+site_description: SLO-aware 5G multi-access edge computing with SMEC
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2026 The University of Texas at Austin
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/rocket-launch-outline
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.indexes
+    - content.tooltips
+    - announce.dismiss
+  palette:
+    - scheme: light
+      primary: black
+      accent: amber
+
+# MkDocs plugins
+plugins:
+  - search
+  - autorefs
+
+# Extensions
+markdown_extensions:
+  - meta
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+
+nav:
+  - Home: index.md
+
+extra_css:
+  - assets/css/extra.css
