@@ -70,20 +70,28 @@ In particular, SMEC is built around three ideas:
 
 </div>
 
+***
 ## BibTeX
 
-If your work uses or is inspired by SMEC, please cite our NSDI’26 paper:
+If you find SMEC relevant to your research, please consider citing:
 
 ```bibtex
 @inproceedings{smec-nsdi26,
   title     = {Enabling SLO-Aware 5G Multi-Access Edge Computing with SMEC},
   author    = {Xiao Zhang and Daehyeok Kim},
   booktitle = {Proceedings of 23rd USENIX Symposium on Networked Systems Design and Implementation {(NSDI)}},
-  month     = {May},
   year      = {2026}
 }
 ```
 
+***
+## Contact
+
+Xiao Zhang (zx123@utexas.edu)
+
+Daehyeok Kim (daehyeok@utexas.edu)
+
+***
 ## Sponsors
 
 <div style="display: flex; align-items: left; justify-content: left; gap: 28px; flex-wrap: wrap; margin-top: 0.75rem">
