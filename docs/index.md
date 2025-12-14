@@ -43,29 +43,28 @@ SMEC’s approach is to make SLOs first-class in MEC scheduling by decomposing e
 In particular, SMEC is built around three ideas:
 
 1. **Decouple control while preserving SLO intent**: Split decision-making across the RAN and the edge so each side can act locally, while still aligning to a shared per-request deadline objective.
-2. **Use deployable signals for deadline awareness**: Derive deadline-relevant state from existing 5G protocol signals and application behaviors, avoiding changes that require new standards or cross-layer interfaces.
+2. **Use existing signals for deadline awareness**: Derive deadline-relevant state from existing 5G protocol signals and application behaviors, avoiding changes that require new standards or cross-layer interfaces.
 3. **Prioritize tail behavior, not averages**: Schedule with explicit attention to high-percentile latency and contention, since tail delay is what drives most SLO violations in practice.
 
 
 <div class="grid cards" markdown>
 
--   **Deployable System**
+-   **Open-source Implementation**
 
     ---
 
-    **RAN resource manager**: implemented as a srsRAN's scheduling policy
+    **RAN resource manager**: Implemented as a srsRAN's scheduling policy
 
-    **Edge resource manager**: runs alongside applications on edge servers
+    **Edge resource manager**: Runs alongside applications on edge servers
 
-    **License**: Apache-2.0 
 
--   **SLO improvements for real-world applications**
+-   **SLO improvements for real-world latency-critical applications**
 
     ---
 
-    **High SLO satisfaction**: **90–96%**.
+    **High SLO satisfaction**: **90–96%**
 
-    **Low tail latency**: reduced by up to **122×**.
+    **Low tail latency**: reduced by up to **122×**, improving performance predictability
 
 
 
