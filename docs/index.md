@@ -6,7 +6,7 @@ hide:
 ---
 
 <div align="center">
-  <img src="assets/img/smec-logo.png" alt="SMEC logo" style="height: 128px; margin: 8px 0 6px" />
+  <img src="assets/img/smec-logo-text.png" alt="SMEC logo" style="height: 128px; margin: 8px 0 6px" />
   <h1 style="font-size: 2rem; margin-bottom: 0px">SMEC: SLO-Aware Cellular Multi-Access Edge Computing</h1>
 </div>
 
