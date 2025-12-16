@@ -6,14 +6,14 @@ hide:
 ---
 
 <div align="center">
-  <img src="assets/img/smec-logo-horizontal.png" alt="SMEC logo" style="height: 128px; margin: 8px 0 6px" />
-  <h1 style="font-size: 2rem; margin-bottom: 0px">SLO-Aware Cellular Multi-Access Edge Computing</h1>
+  <img src="assets/img/smec-logo-horizontal.png" alt="SMEC logo" style="height: 100px; margin: 0px 0 0px" />
+  <h1 style="font-size: 1.5rem; margin-bottom: 0px">SLO-Aware Cellular Multi-Access Edge Computing</h1>
 </div>
 
 
 <div align="center" style="max-width: 980px; margin: 0.75rem auto 0; padding: 0 16px">
   <p style="margin: 0; font-size: 1.05rem; line-height: 1.6">
-    Practical, SLO-aware resource management for 5G/6G multi-access edge computing
+    Practical, SLO-aware resource management for 5G multi-access edge computing
   </p>
 </div>
 
