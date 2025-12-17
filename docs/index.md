@@ -44,9 +44,9 @@ hide:
 Our core insight is that standard 5G protocols and MEC application behaviors already expose the signals needed for SLO-aware scheduling <strong>without requiring RAN-edge coordination</strong>.
 SMEC exploits these readily available signals through three key ideas:
 
-1. **Exploiting 5G control signals for request identification**: Standard 5G control signaling between UE and base station naturally exhibits distinctive patterns when new application requests are generated. SMEC leverages them to detect request boundaries at the RAN without payload inspection or protocol modifications.
-2. **Leveraging downlink stability for network latency estimation**: 5G downlink transmissions exhibit more predictable latency than uplink. SMEC exploits this asymmetry through a lightweight probing protocol between edge servers and client devices, enabling accurate latency tracking without RAN-edge coordination.
-3. **Utilizing application lifecycle events for processing time prediction**: MEC applications' request-response behaviors expose key lifecycle events that enable processing time estimation. SMEC tracks these naturally occurring events through server-side APIs and builds execution history, providing sufficient accuracy for deadline-aware scheduling without requiring invasive application changes.
+1. **Exploiting 5G control signals for request identification at the RAN**: Standard 5G control signaling between UE and base station naturally exhibits distinctive patterns when new application requests are generated. SMEC leverages them to detect request boundaries at the RAN without payload inspection or protocol modifications.
+2. **Leveraging downlink stability for network latency estimation at the edge**: 5G downlink transmissions exhibit more predictable latency than uplink. SMEC exploits this asymmetry through a lightweight probing protocol between edge servers and client devices, enabling accurate latency tracking without RAN-edge coordination.
+3. **Utilizing application lifecycle events for processing time prediction at the edge**: MEC applications' request-response behaviors expose key lifecycle events that enable processing time estimation. SMEC tracks these naturally occurring events through server-side APIs and builds execution history, providing sufficient accuracy for deadline-aware scheduling without requiring invasive application changes.
 
 
 <div class="grid cards" markdown>
@@ -64,9 +64,7 @@ SMEC exploits these readily available signals through three key ideas:
 
     ---
 
-    **90–96% SLO satisfaction** across real-world latency-critical applications
-
-    **Up to 122× tail latency reduction** for latency-critical applications
+    **90–96% SLO satisfaction** across real-world latency-critical applications with SLO requirements ranging from 10s to 100 milliseconds
 
     **Starvation-free** for best-effort applications sharing remaining bandwidth
 
