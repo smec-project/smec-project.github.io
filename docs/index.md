@@ -7,7 +7,7 @@ hide:
 
 <div align="center">
   <img src="assets/img/smec-logo-horizontal.png" alt="SMEC logo" style="height: 100px; margin: 0px 0 0px" />
-  <h1 style="font-size: 1.5rem; margin-bottom: 0px">SLO-Aware Cellular Multi-Access Edge Computing</h1>
+  <h1 style="font-size: 1.2rem; margin-bottom: 0px">SLO-Aware Cellular Multi-Access Edge Computing</h1>
 </div>
 
 
@@ -18,15 +18,17 @@ hide:
 </div>
 
 <div align="center" style="max-width: 980px; margin: 1rem auto 1.25rem; padding: 0 16px">
+  <!--
   <div style="font-size: 1rem; line-height: 1.35">
-    <strong>Xiao Zhang</strong> · <strong>Daehyeok Kim</strong>
+    <strong><a href="https://timez-zx.github.io/">Xiao Zhang</a></strong> · <strong><a href="https://daehyeok.kim">Daehyeok Kim</a></strong>
   </div>
   <div style="font-size: 0.92rem; color: #6b7280; line-height: 1.35">
     The University of Texas at Austin
   </div>
+  -->
   <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 0.85rem">
-    <a href="https://github.com/smec-project" class="md-button md-button--primary">GitHub</a>
-    <a href="https://daehyeok.kim/assets/papers/smec-nsdi26.pdf" class="md-button">NSDI'26 Paper</a>
+    <a href="https://github.com/smec-project" class="md-button md-button--primary">GitHub (Coming soon!)</a>
+    <a href="https://daehyeok.kim/assets/papers/smec-nsdi26.pdf" class="md-button">NSDI'26 Paper (Coming soon!)</a>
   </div>
 </div>
 
@@ -39,12 +41,12 @@ hide:
 
 </figure>
 
-SMEC’s approach is to make SLOs first-class in MEC scheduling by decomposing end-to-end latency into actionable components and enforcing deadlines without requiring tight RAN–edge coordination.
-In particular, SMEC is built around three ideas:
+Our core insight is that standard 5G protocols and MEC application behaviors already expose the signals needed for SLO-aware scheduling <strong>without requiring RAN-edge coordination</strong>.
+SMEC exploits these readily available signals through three key ideas:
 
-1. **Decouple control while preserving SLO intent**: Split decision-making across the RAN and the edge so each side can act locally, while still aligning to a shared per-request deadline objective.
-2. **Use existing signals for deadline awareness**: Derive deadline-relevant state from existing 5G protocol signals and application behaviors, avoiding changes that require new standards or cross-layer interfaces.
-3. **Prioritize tail behavior, not averages**: Schedule with explicit attention to high-percentile latency and contention, since tail delay is what drives most SLO violations in practice.
+1. **Exploiting 5G control signals for request identification**: Standard 5G control signaling between UE and base station naturally exhibits distinctive patterns when new application requests are generated. SMEC leverages them to detect request boundaries at the RAN without payload inspection or protocol modifications.
+2. **Leveraging downlink stability for network latency estimation**: 5G downlink transmissions exhibit more predictable latency than uplink. SMEC exploits this asymmetry through a lightweight probing protocol between edge servers and client devices, enabling accurate latency tracking without RAN-edge coordination.
+3. **Utilizing application lifecycle events for processing time prediction**: MEC applications' request-response behaviors expose key lifecycle events that enable processing time estimation. SMEC tracks these naturally occurring events through server-side APIs and builds execution history, providing sufficient accuracy for deadline-aware scheduling without requiring invasive application changes.
 
 
 <div class="grid cards" markdown>
@@ -53,18 +55,20 @@ In particular, SMEC is built around three ideas:
 
     ---
 
-    **RAN resource manager**: Implemented as a srsRAN's scheduling policy
+    **RAN resource manager**: Pluggable scheduling module for srsRAN's MAC layer
 
-    **Edge resource manager**: Runs alongside applications on edge servers
+    **Edge resource manager**: User-space daemon managing CPU and GPU resources with lightweight client-side timing daemon
 
 
--   **SLO improvements for real-world latency-critical applications**
+-   **Evaluation Highlights**
 
     ---
 
-    **High SLO satisfaction**: **90–96%**
+    **90–96% SLO satisfaction** across real-world latency-critical applications
 
-    **Low tail latency**: reduced by up to **122×**, improving performance predictability
+    **Up to 122× tail latency reduction** for latency-critical applications
+
+    **Starvation-free** for best-effort applications sharing remaining bandwidth
 
 
 
