@@ -34,12 +34,17 @@ hide:
 
 <figure markdown>
 
-<div style="max-width: 1100px; margin: 0 auto; border: 2px dashed #9ca3af; border-radius: 12px; padding: 34px 18px; text-align: center; color: #6b7280">
-  <div style="font-weight: 700; letter-spacing: 0.02em">[Placeholder]</div>
-  <div style="margin-top: 6px">Main system figure will be placed here.</div>
-</div>
+<img src="assets/img/smec-arch.png" alt="SMEC Architecture" style="max-width: 1000px; width: 80%; margin: 0 auto; display: block" />
+<figcaption style="text-align: center; margin-top: 12px; color: #6b7280">SMEC architecture overview and key ideas </figcaption>
 
 </figure>
+
+While multi-access edge computing (MEC) promises low-latency support for applications, our measurements on various commercial deployments reveal a different reality: **high tail latencies frequently violate application SLOs**.
+The culprit? Resource contention at both the RAN and edge servers, compounded by schedulers that lack SLO awareness.
+A common approach require tight coordination between RAN and edge, which is impractical when different entities operate each component (e.g., Verizon runs the RAN while AWS provides edge compute).
+Even if such coordination were possible, feedback delays prevent timely resource allocation.
+
+**SMEC takes a different approach:** it brings SLO-aware scheduling to MEC through **completely decoupled** resource managers at the RAN and edge, each making deadline-aware decisions independently.
 
 Our core insight is that standard 5G protocols and MEC application behaviors already expose the signals needed for SLO-aware scheduling <strong>without requiring RAN-edge coordination</strong>.
 SMEC exploits these readily available signals through three key ideas:
