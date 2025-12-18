@@ -39,7 +39,7 @@ hide:
 
 </figure>
 
-While multi-access edge computing (MEC) promises low-latency support for applications, our measurements on various commercial deployments reveal a different reality: **high tail latencies frequently violate application SLOs**.
+While [multi-access edge computing (MEC)](https://en.wikipedia.org/wiki/Multi-access_edge_computing) promises low-latency support for applications, our measurements on various commercial deployments reveal a different reality: **high tail latencies frequently violate application SLOs**.
 The culprit? Resource contention at both the RAN and edge servers, compounded by schedulers that lack SLO awareness.
 Existing solutions require tight coordination between RAN and edge, which is impractical when different entities operate each component (e.g., Verizon runs the RAN while AWS provides edge compute).
 Even if such coordination were possible, feedback delays prevent timely resource allocation.
