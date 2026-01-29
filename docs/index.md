@@ -27,7 +27,7 @@ hide:
   </div>
   -->
   <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 0.85rem">
-    <a href="https://github.com/smec-project" class="md-button md-button--primary">GitHub (Coming soon!)</a>
+    <a href="https://github.com/smec-project" class="md-button md-button--primary">GitHub</a>
     <a href="https://arxiv.org/pdf/2601.19162" class="md-button">NSDI'26 Paper (preprint)</a>
   </div>
 </div>
