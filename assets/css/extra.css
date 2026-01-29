@@ -1,0 +1,47 @@
+/* Override mkdocs-video plugin styles for responsive margins */
+.video-container {
+  margin: 0 auto !important;
+}
+
+/* Theme primary color (navbar, links, buttons) */
+:root {
+  --md-primary-fg-color: #012a4f;
+  --md-primary-fg-color--light: #073a6b;
+  --md-primary-fg-color--dark: #011c35;
+  --md-accent-fg-color: #fd9525;
+  --md-accent-fg-color--transparent: rgba(253, 149, 37, 0.12);
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .video-container {
+    padding: 0 12% !important;
+  }
+}
+
+/* Mobile - use plugin default */
+@media (max-width: 767px) {
+  .video-container {
+    padding: 0 !important;
+  }
+}
+
+/* Landing header: logo inline with title */
+.smec-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
+
+.smec-title-row__logo {
+  height: 40px;
+  width: auto;
+}
+
+.smec-title-row__title {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.9vw, 1.55rem);
+  line-height: 1.15;
+}
