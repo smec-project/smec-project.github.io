@@ -13,7 +13,7 @@ hide:
 
 <div align="center" style="max-width: 980px; margin: 0.75rem auto 0; padding: 0 16px">
   <p style="margin: 0; font-size: 1.05rem; line-height: 1.6">
-    Practical, SLO-aware resource management for 5G multi-access edge computing
+    Practical, SLO-Aware Resource Management for 5G/6G Multi-Access Edge Computing
   </p>
 </div>
 
