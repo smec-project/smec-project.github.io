@@ -56,7 +56,13 @@ SMEC exploits these readily available signals through three key ideas:
 3. **Utilizing application lifecycle events for processing time prediction at the edge**: MEC applications' request-response behaviors expose key lifecycle events that enable processing time estimation. SMEC tracks these naturally occurring events through server-side APIs and builds execution history, providing sufficient accuracy for deadline-aware scheduling without requiring invasive application changes.
 
 
-<div class="grid cards" markdown>
+<style>
+.smec-summary-cards > ul > li {
+  background-color: #fafafa;
+}
+</style>
+
+<div class="grid cards smec-summary-cards" markdown>
 
 -   **Open-source Implementation**
 
