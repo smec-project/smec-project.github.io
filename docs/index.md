@@ -7,7 +7,7 @@ hide:
 
 <div align="center">
   <img src="assets/img/smec-logo-horizontal.png" alt="SMEC logo" style="height: 100px; margin: 0px 0 0px" />
-  <h1 style="font-size: 1.2rem; margin-bottom: 0px">SLO-Aware Cellular Multi-Access Edge Computing</h1>
+  <h1 style="font-size: 1.2rem; margin-bottom: 0px">SLO-Aware Cellular Multi-Access Edge Computing for Real-Time Interactive Applications</h1>
 </div>
 
 
@@ -34,15 +34,17 @@ hide:
 
 <figure markdown>
 
-<img src="assets/img/smec-arch.png" alt="SMEC Architecture" style="max-width: 1000px; width: 80%; margin: 0 auto; display: block" />
-<figcaption style="text-align: center; margin-top: 12px; color: #6b7280">SMEC architecture overview and key ideas </figcaption>
+<img src="assets/img/smec-arch.png" alt="SMEC System Architecture" style="max-width: 1000px; width: 80%; margin: 0 auto; display: block" />
+<figcaption style="text-align: center; margin-top: 12px; color: #6b7280">SMEC system architecture overview and key ideas </figcaption>
 
 </figure>
 
-While [multi-access edge computing (MEC)](https://en.wikipedia.org/wiki/Multi-access_edge_computing) promises low-latency support for applications, our measurements on various commercial deployments reveal a different reality: **high tail latencies frequently violate application SLOs**.
-The culprit? Resource contention at both the RAN and edge servers, compounded by schedulers that lack SLO awareness.
+Real-time interactive applications, including AI-based video transformation, XR/AR/VR rendering offload, cloud gaming, remote robot teleoperation, and real-time video analytics, depend on low and predictable end-to-end latency.
+5G/6G [multi-access edge computing (MEC)](https://en.wikipedia.org/wiki/Multi-access_edge_computing) is designed to deliver this by placing compute close to users.
+Yet our measurements on commercial deployments reveal a different reality: **high tail latencies frequently violate application SLOs**.
+The root cause is resource contention at both the RAN and edge servers, compounded by schedulers that lack SLO awareness.
 Existing solutions require tight coordination between RAN and edge, which is impractical when different entities operate each component (e.g., Verizon runs the RAN while AWS provides edge compute).
-Even if such coordination were possible, feedback delays prevent timely resource allocation.
+Even if such coordination were feasible, feedback delays prevent timely resource allocation.
 
 **SMEC takes a different approach:** it brings SLO-aware scheduling to MEC through **completely decoupled** resource managers at the RAN and edge, each making deadline-aware decisions independently.
 
@@ -74,6 +76,51 @@ SMEC exploits these readily available signals through three key ideas:
     **Starvation-free** for best-effort applications sharing remaining bandwidth
 
 
+
+</div>
+
+***
+## Target Applications
+
+SMEC targets real-time interactive applications offloaded to MEC servers over 5G, where end-to-end latency directly impacts user experience or task correctness.
+
+<div class="grid cards" markdown>
+
+-   **AI-Based Video Transformation**
+
+    ---
+
+    Real-time style transfer, super-resolution, and background removal must process each video frame within a strict per-frame deadline; missed deadlines cause visible stutter or degraded output quality.
+
+-   **XR / AR / VR Offloading**
+
+    ---
+
+    Head-mounted displays offload rendering and scene understanding to edge servers to meet the motion-to-photon latency budget, typically under 20 ms, required to avoid perceptual discomfort.
+
+-   **Cloud Gaming**
+
+    ---
+
+    Input events must be processed and rendered frames returned within tens of milliseconds to sustain responsive gameplay.
+
+-   **Remote Robot Teleoperation**
+
+    ---
+
+    Control commands and sensor feedback traverse the wireless link in real time; latency spikes can destabilize control loops or lead to unsafe behavior.
+
+-   **Real-Time Video Analytics**
+
+    ---
+
+    Object detection, pose estimation, and activity recognition on live video streams require inference results within each frame interval to support real-time decision-making.
+
+-   **On-Device AI Assistance Offloading**
+
+    ---
+
+    Speech recognition, language model inference, and other AI workloads are offloaded to the edge to meet response-time targets without draining device power.
 
 </div>
 
