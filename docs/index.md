@@ -64,7 +64,7 @@ SMEC exploits these readily available signals through three key ideas:
 
 <div class="grid cards smec-summary-cards" markdown>
 
--   **Open-source Implementation**
+-   **Open-Source Implementation**
 
     ---
 
